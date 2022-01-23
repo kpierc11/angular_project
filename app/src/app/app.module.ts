@@ -9,6 +9,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FeaturedProductsComponent } from './components/featured-products/featured-products.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { AboutComponent } from './pages/about/about.component';
     FeaturedProductsComponent,
     HomeComponent,
     AboutComponent,
+    PageNotFoundComponent,
+    LoginComponent,
     
   ],
   imports: [
