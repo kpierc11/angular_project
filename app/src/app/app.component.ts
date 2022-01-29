@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ConfigService } from './config/config-service';
+import { HttpClient, HttpHandler } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +10,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  list:string[] = ["one", "two", "three"]
+  list: string[] = ["one", "two", "three"];
+  users:any;
+  
+  constructor(private service: ConfigService) { }
+
+  ngOnInit() {
+    this.users = this.service.getUser();
+  }
+
 }
