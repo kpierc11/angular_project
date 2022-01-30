@@ -1,0 +1,20 @@
+<div class="container py-5">
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">User Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Birthdate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let user of users | async">
+        <th scope="row">{{user.name | json}}</th>
+            <td>{{user.username | json}}</td>
+            <td>{{user.email | json}}</td>
+            <td>{{user.birthdate | json}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>

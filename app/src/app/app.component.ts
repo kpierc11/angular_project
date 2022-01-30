@@ -11,12 +11,12 @@ import { Observable } from 'rxjs';
 export class AppComponent {
   title = 'app';
   list: string[] = ["one", "two", "three"];
-  users:any;
+  users: any;
   
-  constructor(private service: ConfigService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.users = this.service.getUser();
+    
   }
 
 }

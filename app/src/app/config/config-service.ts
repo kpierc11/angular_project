@@ -8,7 +8,7 @@ import { catchError, retry, tap } from 'rxjs/operators';
 )
 export class ConfigService {
 
-  apiEndPoint = 'http://localhost:3000/users';
+  apiEndPoint = 'http://localhost:3000/api/user';
   constructor(private http: HttpClient) { }
 
   getUser(){
