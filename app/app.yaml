@@ -1,9 +1,8 @@
 runtime: nodejs16
 
 handlers:
-  - url: /
-     static_files: dist/app/index.html
-     upload: dist/app/index.html
-
-  - url: /
-     static_dir: dist/app
+- url: /
+   static_files: dist/app/index.html
+   upload: dist/app/index.html
+- url: /
+   static_dir: dist/app
