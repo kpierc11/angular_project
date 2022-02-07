@@ -13,6 +13,7 @@ export class UsersTableComponent implements OnInit {
   constructor(private service: ConfigService) {}
 
   ngOnInit() {
-    this.users = this.service.getUser();
+
+    this.users = this.service.getUser("http://localhost:8080/api/user");
   }
 }

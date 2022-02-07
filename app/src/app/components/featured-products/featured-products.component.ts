@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from 'src/app/config/config-service';
 
 @Component({
   selector: 'app-featured-products',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./featured-products.component.css']
 })
 export class FeaturedProductsComponent implements OnInit {
+  products:any
 
-  constructor() { }
+  constructor(private service: ConfigService) {}
 
-  ngOnInit(): void {
+  ngOnInit(){
   }
 
 }

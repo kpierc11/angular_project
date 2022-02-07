@@ -4,6 +4,7 @@ import cors from 'cors';
 const app = express();
 const port = 8080;
 const userRouter = require('./routes/user.route');
+const productsRouter = require('./routes/products.route');
 
 app.use(bodyParser.json());
 app.use(
@@ -16,7 +17,7 @@ app.get('/', (req, res) => {
   res.json({'message': 'ok'});
 })
 
-app.use('/api',cors(), userRouter);
+app.use('/api',cors(), userRouter, productsRouter);
 
 
 app.listen(port, '0.0.0.0', () => {

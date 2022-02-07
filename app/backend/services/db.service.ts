@@ -4,7 +4,7 @@ interface Props {
   dbName:string;
 }
 
-async function queryData(dbName:string) {
+async function queryData(dbName:string, collectionName) {
   /**
    * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
    * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
@@ -17,7 +17,7 @@ async function queryData(dbName:string) {
   try {
     // Connect to the MongoDB cluster
     await client.connect();
-    const queryData = await client.db(`${dbName}`).collection('customers').find({}).toArray();
+    const queryData = await client.db(`${dbName}`).collection(`${collectionName}`).find({}).toArray();
     console.log(queryData);
     console.log(dbName);
     console.log('connected to database')
