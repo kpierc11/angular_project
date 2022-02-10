@@ -12,6 +12,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { LoginComponent } from './pages/login/login.component';
 import { UsersTableComponent } from './components/users-table/users-table.component';
+import { ProductCookiesComponent } from './pages/product-cookies/product-cookies.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { UsersTableComponent } from './components/users-table/users-table.compon
     PageNotFoundComponent,
     LoginComponent,
     UsersTableComponent,
+    ProductCookiesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

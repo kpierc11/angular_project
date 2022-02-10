@@ -7,4 +7,8 @@ async function getUsers() {
    return users
 }
 
+async function LoginUser() {
+   const currentUser = queryData('users', 'user');
+}
+
 module.exports = {getUsers}

@@ -1,52 +1,17 @@
 <div class="container d-flex justify-content-center flex-direction-column py-5">
   <div class="row d-flex justify-content-center">
     <h2 class="d-flex justify-content-center mt-5">Featured Products</h2>
-    <div class="col d-flex justify-content-center">
+    <div class="col d-flex justify-content-center" *ngFor="let product of products">
       <div class="card m-2 card-shadow" style="width: 25rem; overflow:hidden;">
         <img
-          src="assets/stuffed-cookie.jpg"
+          src={{product.image}}
           class="card-img-top product-image"
-          alt="stuffed cookie"
+          alt={{product.name}}
         />
         <div class="card-body">
-          <h5 class="card-title">Stuffed Cookie</h5>
+          <h5 class="card-title">{{product.name}}</h5>
           <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Buy Now</a>
-        </div>
-      </div>
-    </div>
-    <div class="col d-flex justify-content-center">
-      <div class="card m-2 card-shadow" style="width: 25rem; overflow:hidden;">
-        <img
-          src="assets/macroons.jpg"
-          class="card-img-top product-image"
-          alt="Macroons"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Macroons</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Buy Now</a>
-        </div>
-      </div>
-    </div>
-    <div class="col d-flex justify-content-center">
-      <div class="card m-2 card-shadow" style="width: 25rem; overflow:hidden;">
-        <img
-          src="assets/single-chocolate-chip.jpg"
-          class="card-img-top product-image"
-          alt="Chocolate Chip Cookie"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Chocolate Chip Cookie</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            {{product.description}}
           </p>
           <a href="#" class="btn btn-primary">Buy Now</a>
         </div>

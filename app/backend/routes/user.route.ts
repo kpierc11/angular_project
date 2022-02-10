@@ -4,9 +4,12 @@ const userController = require('../controllers/user.controller');
 
 /* GET programming languages. */
 router.get('/user', userController.getUser);
-  
+
 // /* POST programming language */
-// router.post('/', userController.create);
+router.post('/login', (req, res) => {
+    res.send(JSON.stringify(req.body));
+    console.log(req)
+});
 
 // /* PUT programming language */
 // router.put('/:id', userController.update);

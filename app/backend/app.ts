@@ -17,6 +17,10 @@ app.get('/', (req, res) => {
   res.json({'message': 'ok'});
 })
 
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 app.use('/api',cors(), userRouter, productsRouter);
 
 
