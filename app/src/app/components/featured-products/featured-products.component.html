@@ -1,21 +1,26 @@
-<div class="container d-flex justify-content-center flex-direction-column py-5">
+
+<div class="container mt-5 d-flex justify-content-center">
   <div class="row d-flex justify-content-center">
-    <h2 class="d-flex justify-content-center mt-5">Featured Products</h2>
-    <div class="col d-flex justify-content-center" *ngFor="let product of products">
-      <div class="card m-2 card-shadow" style="width: 25rem; overflow:hidden;">
+    <h1>Featured Products</h1>
+    <div class="col-lg-4 mb-5" *ngFor="let product of products">
+      <mat-card>
         <img
-          src={{product.image}}
-          class="card-img-top product-image"
-          alt={{product.name}}
+          mat-card-image
+          style="height: 300px; object-fit: cover"
+          src="{{ product.image }}"
+          alt="{{ product.name }}"
         />
-        <div class="card-body">
-          <h5 class="card-title">{{product.name}}</h5>
-          <p class="card-text">
-            {{product.description}}
+        <mat-card-title> {{ product.name }}</mat-card-title>
+        <mat-card-content>
+          <p>
+            {{ product.description }}
           </p>
-          <a href="#" class="btn btn-primary">Buy Now</a>
-        </div>
-      </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
     </div>
   </div>
 </div>

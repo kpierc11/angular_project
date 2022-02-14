@@ -1,10 +1,12 @@
 import { MongoClient } from 'mongodb';
 
 interface Props {
-  dbName:string;
+  dbName: string;
+  collectionName: string;
+  searchParams?: { };
 }
 
-async function queryData(dbName:string, collectionName) {
+async function queryData({ dbName, collectionName, searchParams }: Props) {
   /**
    * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
    * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
@@ -17,10 +19,16 @@ async function queryData(dbName:string, collectionName) {
   try {
     // Connect to the MongoDB cluster
     await client.connect();
-    const queryData = await client.db(`${dbName}`).collection(`${collectionName}`).find({}).toArray();
+    console.log(dbName);
+    console.log(searchParams);
+    const queryData = await client
+      .db(`${dbName}`)
+      .collection(`${collectionName}`)
+      .find()
+      .toArray();
     console.log(queryData);
     console.log(dbName);
-    console.log('connected to database')
+    console.log('connected to database');
     return queryData;
   } catch (e) {
     console.error(e);
@@ -29,5 +37,4 @@ async function queryData(dbName:string, collectionName) {
   }
 }
 
-
-export default queryData
+export default queryData;

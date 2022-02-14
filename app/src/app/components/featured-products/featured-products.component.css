@@ -12,3 +12,6 @@
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
+.featured-image {
+  object-fit:cover;
+}

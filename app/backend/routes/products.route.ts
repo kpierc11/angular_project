@@ -1,7 +1,9 @@
 import express from 'express';
 const router = express.Router();
-const userController = require('../controllers/user.controller');
+import {UserController} from '../controllers/user.controller';
 const productController = require('../controllers/product.controller');
+const userController = new UserController();
+
 
 /* GET programming languages. */
 router.get('/products', productController.getProducts);

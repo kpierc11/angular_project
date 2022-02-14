@@ -13,6 +13,10 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { LoginComponent } from './pages/login/login.component';
 import { UsersTableComponent } from './components/users-table/users-table.component';
 import { ProductCookiesComponent } from './pages/product-cookies/product-cookies.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -28,8 +32,9 @@ import { ProductCookiesComponent } from './pages/product-cookies/product-cookies
     UsersTableComponent,
     ProductCookiesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule, MatCardModule, MatButtonModule,MatGridListModule ],
   providers: [],
   bootstrap: [AppComponent],
+  
 })
-export class AppModule {}
+export class AppModule { }

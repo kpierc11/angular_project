@@ -1,9 +1,12 @@
 import queryData from '../services/db.service';
 
 async function getProducts() {
-   const users = queryData('products', 'cookie_products');
+  const users = queryData({
+    dbName: 'products',
+    collectionName: 'cookie_products',
+  });
 
-   return users
+  return users;
 }
 
-module.exports = {getProducts}
+module.exports = { getProducts };
