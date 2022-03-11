@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ConfigService } from 'src/app/config/config-service';
+import { ConfigService } from 'src/app/services/config-service';
 
 
 @Component({
@@ -13,7 +13,6 @@ export class UsersTableComponent implements OnInit {
   constructor(private service: ConfigService) {}
 
   ngOnInit() {
-
     this.users = this.service.getUser("http://localhost:8080/api/user");
   }
 }

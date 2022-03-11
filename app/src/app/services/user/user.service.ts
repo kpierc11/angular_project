@@ -1,0 +1,19 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UserService {
+
+  CurrentUser = {name:"kaleb", password:'hello'};
+  constructor(private http: HttpClient) { }
+
+  verifyLogin(apiEndPoint: string, username:string, password:string){
+    return this.http.post(apiEndPoint, {username:username, password:password})
+  }
+
+  getCurrentUser(apiEndPoint: string){
+    return this.http.get(apiEndPoint);
+  }
+}

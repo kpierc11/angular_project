@@ -1,4 +1,4 @@
-import queryData from '../services/db.service';
+import {queryData, insertData} from '../services/db.service';
 
 export class UserModel {
   async getAllUsers() {
@@ -7,6 +7,11 @@ export class UserModel {
       collectionName: 'customers',
     });
     return users;
+  }
+
+  async registerUser(user:any) {
+    insertData({dbName: 'users',
+    collectionName: 'customer',user});
   }
 
   async getUser(email: string) {

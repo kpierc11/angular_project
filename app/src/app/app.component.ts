@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import { ConfigService } from './config/config-service';
-import { HttpClient, HttpHandler } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { slideInAnimation } from './animations/animation';
 import { RouterOutlet } from '@angular/router';
 

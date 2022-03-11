@@ -18,8 +18,4 @@ export class ConfigService {
     return this.http.get<IProduct[]>(apiEndPoint);
   }
 
-  sendLoginInfo(apiEndPoint: string){
-    //return this.http.post(apiEndPoint)
-  }
-
 }

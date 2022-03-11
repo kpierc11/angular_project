@@ -8,7 +8,8 @@ const userController = new UserController();
 router.get('/user', userController.getAllUsers);
 
 // /* POST programming language */
-router.post('/login', userController.verifyUser)
+router.post('/login', userController.loginUser);
+router.post('/register', userController.addUser);
 
 // /* PUT programming language */
 // router.put('/:id', userController.update);

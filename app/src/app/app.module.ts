@@ -16,7 +16,9 @@ import { ProductCookiesComponent } from './pages/product-cookies/product-cookies
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { RegisterComponent } from './pages/register/register.component';
+import {MatIconModule} from '@angular/material/icon'; 
 
 @NgModule({
   declarations: [
@@ -31,10 +33,19 @@ import {MatGridListModule} from '@angular/material/grid-list';
     LoginComponent,
     UsersTableComponent,
     ProductCookiesComponent,
+    RegisterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule, MatCardModule, MatButtonModule,MatGridListModule ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule,
+    MatGridListModule,
+    MatIconModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
-  
 })
-export class AppModule { }
+export class AppModule {}
